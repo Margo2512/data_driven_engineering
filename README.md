@@ -29,3 +29,10 @@
 
 Ниже представлен скриншот первых 10 строк датафрейма:
 ![data_cardiovascular_risk](df_head(10).png)
+
+### black
+Установка: ```poetry add --group dev black```
+
+Запуск (форматирование кода):
+
+```poetry run black src/my_project/data_loader.py```
