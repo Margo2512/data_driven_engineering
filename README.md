@@ -7,7 +7,7 @@
 Для загрузки miniconda через Homebrew:
 ```brew install --cask miniconda```
 
-### Создание виртуального окружения и активация c Conda:
+### Создание виртуального окружения и активация c помощью Conda:
 * ```conda create -n my_env python=3.13 pip```
 * Инициализируем все поддерживаемые оболочки: ```conda init --all``` -> открыть новый терминал
 * ```conda activate my_env```
@@ -15,7 +15,7 @@
 Посмотреть существующие виртуальные окружения:
 ```conda env list```
 
-### Создание виртуального окружения с Poetry:
+### Добавление необходимых библиотек с помощью Poetry:
 * Устанавливаем poetry ```pip install poetry```
 * Создание пакета my_project в my_project: ```poetry new my_project```
 * ```cd my_project``` - переход в директорию
