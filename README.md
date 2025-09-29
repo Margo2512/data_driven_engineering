@@ -22,13 +22,20 @@
 * ```poetry add jupyterlab pandas matplotlib wget``` - добавление новых зависимостей в проект
 * ```poetry install --no-root``` - установка всех библиотек из pyproject.toml
 
-Скрипт выгрузка файла из Google Drive и вывод на экран первых 10 строк лежит в ```src/my_project/data_loader.py```
+Скрипт выгрузки файла из Google Drive и вывод на экран первых 10 строк лежит в ```src/my_project/data_loader.py```
+
+Также в этом файле представлено приведение типов и сохранение в формат .csv
 
 Запуск скрипта:
 ```python3 src/my_project/data_loader.py```
 
 Ниже представлен скриншот первых 10 строк датафрейма:
 ![data_cardiovascular_risk](df_head(10).png)
+
+<details>
+<summary>Итоговые типы столбцов</summary>
+<img src="df_types.png" alt="drawing" width="200"/>
+</details>
 
 ### black
 Установка: ```poetry add --group dev black```
