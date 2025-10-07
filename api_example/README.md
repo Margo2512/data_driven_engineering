@@ -1,4 +1,4 @@
-Данные собраны с сайта PubChem через API.
+Данные собраны с сайта PubChem через API (https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/).
 
 Запустить скрипт можно с помощью команды:
 
