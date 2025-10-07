@@ -58,23 +58,11 @@ def extract_compound_info(data, category):
         "smiles": properties.get("SMILES", ""),
         "inchi": properties.get("InChI", ""),
         "logp": properties.get("Log P", ""),
-        "polar_surface_area": properties.get("Polar Surface Area", ""),
-        "heavy_atom_count": properties.get("Heavy Atom Count", ""),
-        "complexity": properties.get("Complexity", ""),
-        "h_bond_donor": properties.get("Hydrogen Bond Donor Count", ""),
-        "h_bond_acceptor": properties.get("Hydrogen Bond Acceptor Count", ""),
-        "rotatable_bonds": properties.get("Rotatable Bond Count", ""),
-        "exact_mass": properties.get("Exact Mass", ""),
-        "topological_polar_surface": properties.get(
-            "Topological Polar Surface Area", ""
-        ),
-        "atom_stereo_count": properties.get("Atom Stereocenter Count", ""),
-        "defined_atom_stereo": properties.get("Defined Atom Stereocenter Count", ""),
     }
 
 
 df = fetch_pubchem_compounds()
 print(f"Итоговый датасет: {df.shape}")
-df.to_csv("pubchem_chemical_dataset.csv", index=False)
+df.to_csv("df_api.csv", index=False)
 print(df.info())
 print(df.head())

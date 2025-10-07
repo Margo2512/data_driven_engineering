@@ -21,4 +21,4 @@ raw_data["TenYearCHD"] = np.where(raw_data["TenYearCHD"] == 1, True, False)
 
 print(raw_data.head(5))
 print(raw_data.dtypes)
-raw_data.to_csv("df.csv")
+raw_data.to_csv("df_new_types.csv")
