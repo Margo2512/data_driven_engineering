@@ -43,3 +43,7 @@
 Запуск (форматирование кода):
 
 ```poetry run black src/my_project/data_loader.py```
+
+### Загрузка датасета в базу данных
+Запуск скрипта:
+```python3 write_to_db.py```
