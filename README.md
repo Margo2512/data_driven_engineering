@@ -34,7 +34,7 @@
 
 <details>
 <summary>Итоговые типы столбцов</summary>
-<img src="df_types.png" alt="drawing" width="200"/>
+<img src="photo/df_types.png" alt="drawing" width="200"/>
 </details>
 
 ### black
@@ -47,3 +47,6 @@
 ### Загрузка датасета в базу данных
 Запуск скрипта:
 ```python3 write_to_db.py```
+
+### Рендер ноутбука 
+[Ноутбук с EDA](https://nbviewer.org/github/Margo2512/data_driven_engineering/blob/main/notebooks/EDA.ipynb) 
