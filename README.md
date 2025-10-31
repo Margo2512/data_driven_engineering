@@ -2,6 +2,23 @@
 
 Датасет с платформы Kaggle: https://drive.google.com/file/d/1ZAaB3w-ssykhQXt8ikc9w4RM3seucxpQ/view?usp=sharing.
 
+# Project Structure
+my_project/
+|
+|--- notebooks/
+|    |___ EDA.py
+|
+|--- src/
+|    |--- __init__.py
+|    |--- extract.py
+|    |--- load.py
+|    |--- main.py
+|    |___ transform.py
+|
+|--- .gitignore
+|--- poetry.lock
+|--- pyproject.toml
+|___ README.md
 
 # Создание переменного окружения (conda + poetry)
 Для загрузки miniconda через Homebrew:
@@ -22,15 +39,15 @@
 * ```poetry add jupyterlab pandas matplotlib wget``` - добавление новых зависимостей в проект
 * ```poetry install --no-root``` - установка всех библиотек из pyproject.toml
 
-Скрипт выгрузки файла из Google Drive и вывод на экран первых 10 строк лежит в ```src/my_project/data_loader.py```
+Скрипт выгрузки файла из Google Drive и вывод на экран первых 10 строк лежит в ```src/experiments/data_loader.py```
 
 Также в этом файле представлено приведение типов и сохранение в формат .csv
 
 Запуск скрипта:
-```python3 src/my_project/data_loader.py```
+```python3 src/experiments/data_loader.py```
 
 Ниже представлен скриншот первых 10 строк датафрейма:
-![data_cardiovascular_risk](df_head(10).png)
+![data_cardiovascular_risk](photo/df_head(10).png)
 
 <details>
 <summary>Итоговые типы столбцов</summary>
@@ -42,11 +59,29 @@
 
 Запуск (форматирование кода):
 
-```poetry run black src/my_project/data_loader.py```
+```poetry run black src/experiments/data_loader.py```
 
 ### Загрузка датасета в базу данных
 Запуск скрипта:
-```python3 write_to_db.py```
+```python3 src/experiments/write_to_db.py```
 
 ### Рендер ноутбука 
-[Ноутбук с EDA](https://nbviewer.org/github/Margo2512/data_driven_engineering/blob/main/notebooks/EDA.ipynb) 
+[Ноутбук с EDA](https://nbviewer.org/github/Margo2512/data_driven_engineering/blob/main/notebooks/EDA.ipynb)
+
+### Пакет etl
+Поддерживает аргументы командной строки, `python3 src/etl/main.py --help` чтобы посмотреть доступные.
+
+Запуск всего ETL пайплайна с загрузкой в базу данных
+`python3 src/etl/main.py etl --file_id <file_id>`
+
+Проверка таблицы в базе данных и вывод нескольких первых значений
+`python3 src/etl/main.py validate_db`
+
+Необходимо указать такие переменные окружения:
+- DB_USER
+- DB_PASSWORD
+- DB_URL
+- DB_PORT
+- DB_ROOT_BASE
+
+Можно сделать это с помощью .env файла, используя флаг  `--use_dotenv`
