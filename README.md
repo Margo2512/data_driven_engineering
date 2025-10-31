@@ -3,6 +3,7 @@
 Датасет с платформы Kaggle: https://drive.google.com/file/d/1ZAaB3w-ssykhQXt8ikc9w4RM3seucxpQ/view?usp=sharing.
 
 # Project Structure
+```
 my_project/
 |
 |--- notebooks/
@@ -19,6 +20,7 @@ my_project/
 |--- poetry.lock
 |--- pyproject.toml
 |___ README.md
+```
 
 # Создание переменного окружения (conda + poetry)
 Для загрузки miniconda через Homebrew:
